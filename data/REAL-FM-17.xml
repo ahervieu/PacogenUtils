@@ -1,0 +1,53 @@
+<!-- This model was created online using SPLOT's Feature Model Editor (http://www.splot-research.org) on Fri, Jun 13, 2014 - 12:14 PM  -->
+<feature_model name="Insurance_Product">
+<meta>
+<data name="description">Feature model of an simple insurance product</data>
+<data name="creator">Bedir Tekinerdogan</data>
+<data name="address"></data>
+<data name="email"></data>
+<data name="phone"></data>
+<data name="website"></data>
+<data name="organization"></data>
+<data name="department"></data>
+<data name="date"></data>
+<data name="reference">Bedir Tekinerdogan and Mehmet Aksit. Managing variability in product line scoping using design space models. Proceedings of Software Variability Management Workshop, Gronin-gen, IWI 2003-7-01, The Netherlands, pages 5?12, 2003.</data>
+</meta>
+<feature_tree>
+:r insurance_product(_id_0)
+	:m insured_object(_id_1)
+		:g (_id_2) [1,1] 
+			: corporation(corporation)
+			: realty(_id_3)
+			: movable_property(movable_property)
+			: person(person)
+	:m coverage(_id_4)
+		:g (_id_5) [1,*] 
+			: illness(illness)
+			: life(_id_6)
+			: unemployment(_id_7)
+			: damage(damage)
+			: loss(loss)
+	:m payment(_id_8)
+		:g (_id_9) [1,1] 
+			: service(_id_10)
+			: ammount(_id_11)
+		:o own_risk(_id_12)
+	:m conditions(_id_13)
+		:m acceptance(_id_14)
+		:m exception(_id_15)
+	:m premium(_id_16)
+		:g (_id_17) [1,1] 
+			: direct(_id_18)
+			: periodical(_id_19)
+	:m payee(_id_20)
+		:g (_id_21) [1,*] 
+			: person(_id_22)
+			: corporation(payee_corporation)
+</feature_tree>
+<constraints>
+c1:~corporation or ~illness
+c2:~person or ~damage
+c4:~corporation or payee_corporation
+c3:~loss or movable_property
+</constraints>
+</feature_model>

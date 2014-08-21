@@ -31,6 +31,8 @@ public class PacogenConfigLoader extends ConfigLoader {
 			String key = ft[i] ;
 			key = key.trim() ;
 		//	key = key.replace("_","") ;
+			key = key.replace("/","") ;
+			key = key.replace("+","") ;
 			key = key.replace(" ","") ;
 			key = key.toLowerCase() ;
 			ft[i] = key ;

@@ -85,6 +85,9 @@ public class Node {
 	public String getPrologName()
 	{
 		String res = "a" + fr.pacogen.utils.StringOperation.sansAccent(Id);
+		res = res.replace("/","") ;
+		res = res.replace("+","") ;
+		res = res.replace("-","") ;
 		return res.toUpperCase() ;
 		
 	}

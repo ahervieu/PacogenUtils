@@ -15,7 +15,7 @@ public class SPLCATConfigTest {
 
 	@Test
 	public void test() throws IOException {
-		SPLCATConfigLoader pcf = new SPLCATConfigLoader("/Users/Aymeric/Documents/workspace/Pacogen_Utils/data/REAL-FM-2.xml.ca2.csv") ;
+		SPLCATConfigLoader pcf = new SPLCATConfigLoader("/Users/Aymeric/Documents/workspace/Pacogen_Utils/data/model_20110809_1799855518.xml.ca2.csv") ;
 		PairCounter pc = new PairCounter(pcf) ;
 		System.out.println(pc.getPairNumber());
 		pc.getPairData("/Users/Aymeric/Documents/workspace/Pacogen_Utils/data/SplcatData.csv");

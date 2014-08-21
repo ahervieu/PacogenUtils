@@ -14,7 +14,7 @@ public class PacogenConfigTest {
 
 	@Test
 	public void test() throws IOException {
-		PacogenConfigLoader pcf = new PacogenConfigLoader("/Users/Aymeric/Documents/workspace/Pacogen_Utils/data/Weather Station") ;
+		PacogenConfigLoader pcf = new PacogenConfigLoader("/Users/Aymeric/Documents/workspace/Pacogen_Utils/data/model_20110809_1799855518.xml.csv") ;
 		PairCounter pc = new PairCounter(pcf) ;
 		System.out.println(pc.getPairNumber());
 		pc.getPairData("/Users/Aymeric/Documents/workspace/Pacogen_Utils/data/pacoData.csv");

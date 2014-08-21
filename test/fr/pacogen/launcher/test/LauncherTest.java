@@ -13,7 +13,7 @@ public class LauncherTest {
 
 	@Test
 	public void test() throws IOException {
-		Launcher l = new Launcher("[ff]","/Users/Aymeric/Documents/workspace/Pacogen_Utils/data/model_20091225_1547989376.xml","9") ;
+		Launcher l = new Launcher("[ff]","/Users/Aymeric/Documents/workspace/Pacogen_Utils/data/model_20120419_1397354511.xml","8") ;
 		l.launch();
 	}
 
